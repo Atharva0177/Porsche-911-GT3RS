@@ -6,14 +6,13 @@ interface IntroSplashProps {
   durationMs?: number
 }
 
-export default function IntroSplash({ durationMs = 8000 }: IntroSplashProps){
+export default function IntroSplash({ durationMs = 10000 }: IntroSplashProps){
   type MotionDivProps = React.ComponentProps<'div'> & MotionProps
-  type MotionImgProps = React.ComponentProps<'img'> & MotionProps
-
   const MotionDiv = motion.div as unknown as React.ForwardRefExoticComponent<
     MotionDivProps & React.RefAttributes<HTMLDivElement>
   >
 
+  type MotionImgProps = React.ComponentProps<'img'> & MotionProps
   const MotionImg = motion.img as unknown as React.ForwardRefExoticComponent<
     MotionImgProps & React.RefAttributes<HTMLImageElement>
   >
