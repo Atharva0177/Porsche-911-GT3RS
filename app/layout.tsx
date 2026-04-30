@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:739639b878763d42795d57f81029b094551bd04448bb64c5896fc5e4e8bf737a
-size 400
+import '../styles/globals.css'
+import React from 'react'
+
+export const metadata = {
+  title: 'Porsche 911 GT3 RS — Scrollytelling',
+  description: 'High-end scrollytelling showcase for the 911 GT3 RS'
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }){
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  )
+}
